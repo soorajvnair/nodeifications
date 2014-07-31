@@ -219,6 +219,7 @@
 	}
 
     function eventHandler(event, id, callback) {
+	event.stopPropagation();
         target = event.target.className || event.target.id || event.target.nodeName.toLowerCase();
         callback(target);
     }
